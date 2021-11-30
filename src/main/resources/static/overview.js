@@ -69,7 +69,7 @@ window.registerExtension('hubsonarqube/overview', function (options) {
 
 function getAndDisplayData(wrapper, page = 1) {
     window.SonarRequest.getJSON('/api/measures/component_tree', {
-        baseComponentKey: window.globalOptions.component.key,
+        component: window.globalOptions.component.key,
         p: page,
         ps: PAGE_SIZE,
         metricKeys: METRIC_KEYS,
